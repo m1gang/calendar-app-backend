@@ -9,11 +9,8 @@ const app = express();
 app.use(express.static("public"));
 
 //Rutas
-// app.get("/", (req, res) => {
-//   res.json({
-//     ok: true,
-//   });
-// });
+app.use("/api/auth", require("./routes/auth"));
+// todo-> crud: Eventos
 
 // Escuchar peticiones
 
