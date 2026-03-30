@@ -16,6 +16,6 @@ router.post("/new", crearUsuario);
 
 router.post("/", loginUsuario);
 
-router.get("/", revalidarToken);
+router.get("/renew", revalidarToken);
 
 module.exports = router;
