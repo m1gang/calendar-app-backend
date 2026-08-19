@@ -9,6 +9,13 @@ const path = require("path");
 const app = express();
 
 //Base de datos
+if (!process.env.DB_CNN) {
+  console.error(
+    "FALTA LA VARIABLE DE ENTORNO DB_CNN. Revisa la pestana 'Environment' de tu servicio en Render y agrega DB_CNN con tu cadena mongodb+srv://..."
+  );
+  process.exit(1);
+}
+
 dbConnection();
 
 //CORS
